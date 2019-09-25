@@ -1,0 +1,11 @@
+@namespace("ch.seibertec.demo.scalakafka")
+protocol MySpecificarotocol {
+
+  record MySpecificData {
+    timestamp_ms dueTimeInMillis;
+    string name;
+    long aLongValue = 0;
+    union { null, string}  anOptionalString = null;
+  }
+}
+

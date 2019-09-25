@@ -1,0 +1,16 @@
+@namespace("ch.seibertec.demo.scalakafka")
+protocol MyGenericProtocol {
+
+  record MyGenericData {
+    timestamp_ms aTimestamp;
+    date aDate;
+    decimal(20, 8) aDecimalValue;
+    string aStringValue;
+    long aLongValue = 0;
+  }
+
+  record MyGenericUnion {
+    union { string, decimal(20, 8), array<string> }  anCoProduct;
+  }
+}
+
